@@ -1,0 +1,20 @@
+<div class="city-card-container">
+  <div *ngFor="let city of citiesResponse.cities" class="city-card">
+    <h2>{{ city.city_name }}</h2>
+    <img [src]="'http://localhost:3001/images/' + city.image" alt="{{ city.city_name }}">
+    <div class="file-upload">
+      <label for="file-input-{{ city.city_id }}" class="custom-file-upload">
+        Change Photo
+      </label>
+      <input type="file" id="file-input-{{ city.city_id }}" (change)="onSelectImage($event, city)">
+    </div>
+    <p>Country: {{ city.country }}</p>
+    <p>Continent: {{ city.continent }}</p>
+    <p>Population: {{ city.population }}</p>
+    <p>Founded: {{ city.founded }}</p>
+    <div class="details-button-container">
+    <button class="upload-button" (click)="onUploadImage($event, city.city_id)" [disabled]="!city.imageSelected">Upload Image</button>
+      <button class="details-button" (click)="redirectToCity(city)">Details</button>
+    </div>
+  </div>
+</div>

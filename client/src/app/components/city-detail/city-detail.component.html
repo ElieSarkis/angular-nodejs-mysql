@@ -1,0 +1,18 @@
+<div class="details-container">
+  <div class="header">
+    <button class="return-button" (click)="goBack()">Return</button>
+    <h2>{{ cityParams.city_name }} Details</h2>
+  </div>
+  <div *ngIf="cityParams.landmarks && cityParams.landmarks.length > 0">
+    <h3>Landmarks:</h3>
+    <ul class="landmarks-list">
+      <li *ngFor="let landmark of cityParams.landmarks">{{ landmark }}</li>
+    </ul>
+  </div>
+</div>
+<!-- the below is the html for the map taken from leaflet library -->
+<div class="map-container">
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+</div>

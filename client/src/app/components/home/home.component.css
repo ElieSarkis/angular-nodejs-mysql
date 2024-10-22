@@ -1,0 +1,104 @@
+  .city-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .city-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    width: calc(33.33% - 40px);
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 150px;
+    max-height: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .file-upload {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .file-upload:hover {
+    background-color: #2980b9;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .details-button {
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-button:hover, .details-button:hover {
+    background-color: #45a049;
+  }
+  
+  .details-button-container {
+    margin-top: auto;
+  }
+
+  .upload-button:disabled {
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #666666;
+  }
+  
+  .upload-button:disabled:hover {
+    background-color: #cccccc;
+  }
+  
+  @media (max-width: 768px) {
+    .city-card {
+      width: calc(50% - 40px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .city-card {
+      width: calc(100% - 40px);
+    }
+  }
+  
+  
